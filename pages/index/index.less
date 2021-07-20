@@ -1,0 +1,138 @@
+// view {
+//     /* 使用主题颜色 */
+//     /* color: var(--themeColor) */
+// }
+.index_swiper{
+    swiper{
+        width: 750rpx;
+        height: 315rpx;
+        image{
+            width: 100%;
+        }
+    }
+}
+.index_cate{
+    display: flex;
+    navigator{
+        flex: 1;
+        padding: 25px;
+        image{
+            width: 100%;
+        }
+    }
+}
+.index_floor{
+    .floor_group{
+        .floor_title{
+            border:10rpx solid #2c2c2c; 
+            border-top:none; 
+            border-bottom:none;
+            border-right: none;
+            padding: 10rpx;
+            
+        }
+        .floor_list{
+          display: flex;
+          flex-wrap: wrap;
+          navigator{
+            padding: 10rpx;
+            width: 33.33%;
+            //text-align 属性规定元素中的文本的水平对齐方式
+            text-align: center;
+            image{
+                width: 50%;
+            }
+            .books_name{
+              overflow: hidden;//超出一行后自动隐藏
+              text-overflow: ellipsis;//文字隐藏后添加省略号
+              white-space: nowrap;//强制不换行
+            }
+            .books_price{
+              color: red;
+            }
+        }      
+      }
+    }
+}
+
+
+/* 扫码悬浮窗设置 */
+
+.contact-wrap1 {
+    /* fixed 	生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+    position: fixed;  
+    /* 设置元素的堆叠顺序 */
+    z-index: 9;
+    right: 30rpx;
+    bottom: 190rpx;
+    box-shadow: 2rpx 4rpx 10rpx #f1f1f1;
+    color: #999;
+    border-radius: 10rpx;
+  }
+  .contact-wrap1 .contact-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130rpx;
+    width: 160rpx;
+    opacity: 0.9;
+    background: #fff;
+  }
+  .contact-wrap1 .icon-mask {
+    background: #000;
+    opacity: 0.9;
+  }
+  .contact-wrap1 .contact-btn:after {
+    border: none;
+  }
+  .contact-wrap1 .contact-btn .icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+  }
+  .contact-wrap1 .contact-btn .text {
+    font-size: 22rpx;
+    text-align: center;
+  }
+  
+  
+  /* 客服悬浮窗样式 */
+  
+  .contact-wrap {
+    /* fixed 	生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+    position: fixed;  
+    /* 设置元素的堆叠顺序 */
+    z-index: 9;
+    right: 30rpx;
+    bottom: 30rpx;
+    box-shadow: 2rpx 4rpx 10rpx #f1f1f1;
+    color: #999;
+    border-radius: 10rpx;
+  }
+  .contact-wrap .contact-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130rpx;
+    width: 160rpx;
+    opacity: 0.9;
+    background: #fff;
+  }
+  .contact-wrap .icon-mask {
+    background: #000;
+    opacity: 0.9;
+  }
+  .contact-wrap .contact-btn:after {
+    border: none;
+  }
+  .contact-wrap .contact-btn .icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+  }
+  .contact-wrap .contact-btn .text {
+    font-size: 22rpx;
+    text-align: center;
+  }

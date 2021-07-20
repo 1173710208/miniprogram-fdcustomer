@@ -1,0 +1,87 @@
+<!-- <view>首页
+<text class="iconfont icon-shouhuodizhi"></text> 
+</view> -->
+<view class="pyg_index">
+    <!-- 搜索框结构 -->
+    <SearchInput></SearchInput>
+    <!-- 搜索框结束 -->
+    <!-- 轮播图结构 -->
+    <view class="index_swiper">
+        <!-- swiper标签默认 100%*150px
+             image标签默认 320px*240px
+             图片标签的mode属性 渲染模式 widthFix 让图片的标签宽高 和 图片标签内容的宽高 都发生等比例的变化(原图938*394=750*315)750*340
+             -->
+        <swiper autoplay="true" indicator-dots="ture" circular="true">
+            <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+                <navigator bindtap="search" data-value="{{item.cate}}" open-type="switchTab" url="{{item.navigator_url}}">
+                    <image mode="widthFix" src="{{item.image_src}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 轮播图结束 -->
+    <!-- 导航栏开始 -->
+    <view class="index_cate">
+        <navigator 
+        wx:for="{{catesList}}" wx:key="name" 
+        open-type="switchTab" url="/pages/category/category"
+        bindtap="search" data-value="{{item.cate}}" >
+            <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+    </view>
+    <!-- 导航栏结束 -->
+    <!-- 楼层开始 -->
+    <view class="index_floor">
+        <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+        <!-- 标题 -->
+            <view class="padding10 "></view>
+            <view class="floor_title">
+                {{item1.floor_title.name}}
+                <!-- <image mode="widthFix" src="{{item1.floor_title.image_src}}" /> -->
+            </view>
+            <view class="padding10 "></view>
+        <!-- 内容 -->
+            <view class="floor_list" >
+               <navigator 
+                wx:for="{{item1.product_list}}" 
+                wx:key="name"
+                wx:for-index="index2"
+                wx:for-item="item2"
+                url="{{item2.navigator_url}}">
+                    <image mode="widthFix" src="{{item2.image_src}}" />
+                    <view class="books_name">
+                        {{item2.name}}
+                    </view>
+                    <view class="books_price">
+                        ￥{{item2.price}}
+                    </view>
+               </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 楼层结束 -->
+    <!-- 查看更多跳转 -->
+    <view>
+        <view class="padding10 "></view>
+        <navigator class=".center color999999" open-type="switchTab" url="../../pages/category/category">
+            >>>查看更多图书
+        </navigator>
+        <view class="padding10 "></view>
+    </view>
+    <!-- 查看更多结束 -->
+    <!-- 扫码客服悬浮窗 -->
+    <view class='contact-wrap'>
+        <button class="contact-btn"  open-type="contact">
+            <image class='icon' src='../../icons/contact.png'></image>
+            <view class='text'>客服</view>
+        </button>
+    </view>
+    <view class='contact-wrap1'>
+        <button class="contact-btn"  bindtap='scanCode'>
+            <image class='icon' src='../../icons/scan.png'></image>
+            <view class='text'>扫码</view>
+        </button>
+    </view>
+    
+    <!-- 扫码客服悬浮窗结束 -->
+</view>

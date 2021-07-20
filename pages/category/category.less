@@ -1,0 +1,70 @@
+/* pages/category/index.wxss */
+page{
+    height: 100%;
+}
+.cates{
+    height: 100%;
+    .cates_container{
+        //在less中使用calc要注意：~'cala()'
+        height: calc(100vh - 90rpx);
+        display: flex;
+        .left_menu{
+            // 伸缩盒子flex 子项 默认高度 100%
+            flex: 2;
+            background-color: #f2f2f2;
+            .menu_item{
+                height: 80rpx;
+                display: flex;
+                //弹性盒子元素在主轴（横轴）方向上的对齐方式
+                justify-content: center;
+                //flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式
+                align-items: center;
+                font-size: 30rpx;
+                color: #2d2d2d;
+            }
+            .active{
+                color: black ;
+                font-weight: 600;
+                border-left: 7rpx solid currentColor;
+            }
+        }
+        .right_content{
+            flex: 5;
+            .goods_group{
+                .goods_title{
+                    height: 80rpx;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    .delimiter{
+                        color: #ccc;
+                        padding: 0 10rpx;
+                    }
+                    .title{
+                        
+                    }
+                }
+                .goods_list{                   
+                    display: flex;
+                    flex-wrap: wrap;
+// flex-wrap 属性用于指定弹性盒子的子元素换行方式
+// flex-wrap：nowrap;
+// nowrap 是flex-wrap的 默认值，弹性容器为单行。该情况下弹性子项可能会溢出容器                    
+// flex-wrap：wrap ；
+// 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行。
+// flex-wrap：wrap-reverse ；
+// 与 wrap相反的排列方式。                           
+                    navigator{
+                        width: 33.33%;
+                        //text-align 属性规定元素中的文本的水平对齐方式
+                        text-align: center;
+                        image{
+                            width: 50%;
+                        }
+                        .goods_name{}
+                    }                  
+                }
+            }
+        }
+    }
+}

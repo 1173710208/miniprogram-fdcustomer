@@ -1,0 +1,27 @@
+/* components/SearchInput/SeaarchInput.wxss */
+
+.search_input {
+    height: 90rpx;
+    padding: 10rpx;
+    background-color: #fff;
+    /* background-color: var(--themeColor); */
+}
+
+.search_input navigator {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: solid #2c2c2c 5rpx;
+    border-radius: 15rpx;
+    color: #666;
+}
+
+.font_size_24{
+    font-size: 24rpx;
+}
+
+.font_weight_500{
+    font-weight: 500;
+}

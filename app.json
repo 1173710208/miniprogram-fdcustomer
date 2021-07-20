@@ -1,0 +1,69 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/category/category", 
+        "pages/bag/bag",
+        "pages/cart/cart",
+        "pages/my/my",
+        "pages/search/search",
+        "pages/goods_list/goods_list",
+        "pages/books_list/books_list",
+        "pages/goods_detail/goods_detail",
+        "pages/books_detail/books_detail",
+        "pages/pay/pay",
+        "pages/auth/auth",
+        "pages/login/login",
+        "pages/collect/collect",
+        "pages/feedback/feedback",
+        "pages/order/order"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "樊登读书",
+        "navigationBarTextStyle": "black"
+    },
+
+
+    "tabBar": {
+        "color": "#cdcdcd",
+        "selectedColor": "#2c2c2c",
+        "backgroundColor": "#ffffff",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icons/home.png",
+                "selectedIconPath": "icons/home_.png"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类",
+                "iconPath": "icons/categories.png",
+                "selectedIconPath": "icons/categories_.png"
+            },
+            {
+                "pagePath": "pages/bag/bag",
+                "text": "书包",
+                "iconPath": "icons/bag.png",
+                "selectedIconPath": "icons/bag_.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "icons/cart.png",
+                "selectedIconPath": "icons/cart_.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "icons/my.png",
+                "selectedIconPath": "icons/my_.png"
+            }
+        ]
+    },
+
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
